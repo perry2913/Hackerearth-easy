@@ -1,0 +1,30 @@
+#count inverse in n*n matrix
+https://www.hackerearth.com/practice/codemonk/
+
+
+t = int(input())
+
+#taking a matrix as input
+
+for _ in range(t):
+    n = int(input())
+    matrix=[]
+    for i in range(n):
+        row = input().split()
+        matrix.append(row)
+    #print(matrix)
+    count=0
+    
+#finding/counting inverse *
+
+    for i in range(n):
+        for j in range(n):
+            for p in range(n):
+                for q in range(n):
+                    if i<=p and j<=q:
+                        if matrix[i][j] > matrix[p][q]:
+                            count +=1
+    print(count)
+    
+    #inverse is every time an element in a matrix was in desc order/ an element of smaller index has higher value.thats inverse :)
+    
