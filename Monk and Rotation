@@ -1,0 +1,14 @@
+
+testCase  = int(input())
+for _ in range(testCase):
+    n,k = map(int,input().split())
+    l = list(map(int,input().split()))
+    x = k%n
+    print(*(l[n-x:]+l[:n-x]))
+    
+    
+# // input().split() gives you idkw but its not a specific thing and its str.
+so make it int,or list or whatever you need.
+# // x = k%n is used to remove the complete rotations, ie. if i have to rotate [1,2,3] - 4 time, it means i essentially have to rotate it just once.
+# // print(*l) prints a list like a str
+# // we use n-x and not x . try examples and u'll know why.
