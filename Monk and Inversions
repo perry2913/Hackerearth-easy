@@ -10,7 +10,7 @@ for _ in range(t):
     n = int(input())
     matrix=[]
     for i in range(n):
-        row = input().split()
+        row = list(map(int,input().split()))
         matrix.append(row)
     #print(matrix)
     count=0
@@ -27,4 +27,5 @@ for _ in range(t):
     print(count)
     
     #inverse is every time an element in a matrix was in desc order/ an element of smaller index has higher value.thats inverse :)
-    
+    #IMP - although imput().split() gives a list , its not a list of int but alist of characters. 
+    thus USE - list(map(int,input().split()))
